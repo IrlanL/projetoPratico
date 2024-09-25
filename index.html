@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Batman Trailler</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <header>
+            <img id="logo" src="./midias/logo_1-removebg-preview.png" alt="Logo do site">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./contacts.html">Contatos</a>
+                    </li>
+                    <li>
+                        <a href="./pictures.html">Fotos</a>
+                    </li>
+                    <li>
+                        <a href="./comments.html">Comentários</a>
+                    </li>
+                </ul>
+            </nav>
+            
+        </header>
+
+        <div id="banner"></div>
+        <div id="trailer-container">
+            <div class="content">
+                <video controls class="trailer">
+                    <source src="./midias/The%20Batman%20-%20Trailer%20Principal.mp4" type="video/mp4">
+                    Conteúdo de video não suportado! Atualize seu navegador para uma versão mais recente.
+                </video>
+                <div id="sinopse">
+                    <p class="description">
+                        Após dois anos espreitando as ruas como Batman, Bruce Wayne se encontra nas profundezas mais sombrias de Gotham City. Com poucos aliados confiáveis, o vigilante solitário se estabelece como a personificação da vingança para a população.
+                    </p>
+                    <button id="CB" class="button"> Comprar Ingresso</button>
+                </div>
+            </div>
+        </div>
+        <div class="actor-cards-container">
+            <div class="cards-content">
+                <div class="card banner-1">Rober Pattison - Batman</div>
+                <div class="card banner-2">Zoe Kravitz - Mulher Gato</div>
+                <div class="card banner-3">Jeffrey Wright - Gordon</div>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById('CB').addEventListener('click', function() {
+                // Redireciona para a página desejada
+                window.location.href = './contacts.html';
+            });
+        </script>
+        
+
+        <footer>
+            <img style="object-fit: contain;" id="logo" src="./midias/logo_1-removebg-preview.png">
+            <!-- Usando o mesmo ID 'logo' no header e no footer para simplificar a estilização, lembrar de corrigir a duplicidade de IDs para Class -->
+            <span>Todos os direitos reservados©</span>
+            <span>Desenvolvido por: Irlan Moreira</span>
+
+            <nav class="footer-navigation">
+                <ul class="footer-list">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./contacts.html">Contatos</a></li>
+                    <li><a href="./pictures.html">Fotos</a></li>
+                    <li><a href="./comments.html">Comentários</a></li>
+                </ul>
+            </nav>
+
+        </footer>
+    </body>
+</html>

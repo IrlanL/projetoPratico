@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    background-color: #000;
+    /* background-color: #797373; */
+}
+
+header {
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav {
+    width: 60%;
+}
+
+ul { 
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+a {
+    list-style: none;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 19px;
+    transition: .5s;
+    font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+a:hover {
+    color: #D21617;
+}
+
+#logo {
+/*    width: 150px; /*recomendado pela aula*/
+    width: 200px;
+    height: auto;
+    margin-bottom: 12px;
+    background-color: transparent;
+    transition: 0.6s;
+}
+
+#logo:hover {
+    transform: scale(1.2); 
+}
+
+
+/* ========== Home ========== */
+
+#banner {
+    background-image: url('https://blogs.uai.com.br/opipoqueiro/wp-content/uploads/sites/54/2022/02/Batman-01.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 600px; /* medida indicada na aula */
+/*    padding-top: 43.18%; /*     Proporção calculada: 250/579 ≈ 0.4318 x 100 = 43.18%
+        Vamos supor que a imagem do banner tenha uma proporção de 16:9. Nesse caso, a altura é 56.25% da largura (porque 9/16 = 0.5625).
+        O mesmo cálculo pode ser feito utilizando a dimensão da imagem em pixels, ex: 250x759p (altura e largura).*/
+}
+
+#trailer-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    /* border: 3px solid white; */
+}
+
+.content {
+    width: 60%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+        /* border: 3px solid red; */
+}
+
+.trailer {
+    width: 50%;
+        /* border: 3px solid rgb(61, 255, 2); */
+}
+
+#sinopse {
+    text-align: justify;
+    text-indent: 2em;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 30px;
+    color: #fff;
+       /* border: 3px solid blue; */
+}
+    
+.description {
+    color: #fff;
+    font-size: 19px;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    width: 100%;
+       /* border: 3px solid cadetblue; */
+}
+
+.button {
+    width: 200px;
+    height: 60px;
+    background-color: #d21617;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .8s;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-top: 25px;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.actor-cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+        /* border:3px dotted white; */
+}
+
+.cards-content {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 40px;
+        	/* border: 3px solid red; */
+}
+
+.card {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 20px 20px;
+    color: #fff;
+    font-size: 17px;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    /* background-color: aqua; */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+/* .banner-1 {
+    background-image: url('https://i1.wp.com/www.towleroad.com/wp-content/uploads/2019/02/Screen-Shot-2019-02-13-at-3.31.08-AM.png?resize=921,904');
+}
+.banner-2 {
+    background-image: url('https://i.pinimg.com/736x/0a/a6/61/0aa66140c3d0bde86a8de619f1bf11da.jpg');
+}
+.banner-3 {
+    background-image: url('https://www.motionpictures.org/wp-content/uploads/2018/04/e3305d6a4ce574b9753216279246e7d4011bb50c6320a92ccc01175cc80bd2f823ab3a41d2b4aacefefe93daf333fe64-1-1024x576.jpg');
+    background-position:70%;
+} */
+
+.banner-1 {
+    background-image:url('./midias/batman.png');
+    background-position: 30%;
+}
+.banner-2 {
+    background-image: url('./midias/mulher\ gato.png');
+}
+.banner-3 {
+    background-image: url('./midias/gordon.png');
+    background-position:70%; /*com esse comando eu pude movimentar o campo de exibição da imagem da esquerda para a direita, assim posicionando de forma conveniente*/
+}
+
+footer {
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+span {
+    color: #fff;
+    font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.footer-navigation {
+    display: none;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ========== Contatos ========== */
+
+#contacts {
+    background-image: url("./midias/BatGround.png");
+    background-position: left;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+}
+
+
+ h1 {
+    background-color: transparent;
+    text-align: center;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    color: aliceblue;
+    padding: 30px;
+    display: block;
+}
+
+.doc-content {
+    padding-top: 10vw;
+    width: 500px;
+    height: 480px;
+    background-color: transparent;
+    margin-left: 50%;
+}
+
+.form {
+    width: 100%;
+    height: 75%;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 2fr;
+}
+
+.fill {
+    display: grid;
+    grid-template-columns: 2fr;
+    align-items: center;
+    justify-items: center;
+    background-color: transparent;
+    
+}
+
+.StForm {
+    width: 90%;
+    height: 70%; 
+    border-radius: 10px;
+    color: aliceblue;
+}
+
+.major {
+    background-color: #0000003b;
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+}
+
+.minor {
+    background-color: transparent;
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+}
+
+.all-config {
+    background-color: #d21617;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.input-config {
+    width: 90%;
+    height: 50%;
+    color: aliceblue;
+    border: none;
+    outline: none;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    text-align: center;
+    font-size: large;
+}
+
+.input-config::placeholder {
+    color: aliceblue;
+    text-align: center;
+    font-size: large;
+}
+
+.contacts-button-config {
+    Width: 50%;
+    height: 60%;
+    cursor: pointer;
+    transition: .8s;
+    font-size: 18px;
+    border: solid;
+    border-color: #000;
+    outline: none;
+    color: aliceblue;
+}
+
+.contacts-button-config:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.info{
+    background-color: transparent;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.text-info {
+    color: aliceblue;
+    text-align: center;
+    width: 60%;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+
+    .footer-navigation{
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+/* ========== Imagens ========== */
+
+#PicturesBanner {                      /*Estilização do Banner*/
+    background-image: url(./midias/BackgroundImagesPage.jpeg);
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TitleContainer {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    color: red;
+    font-size:80px ;
+}
+
+#pictures-container {
+    width: 90%;
+    position: relative;
+    margin: 100px 5% 600px 5%;
+}
+
+#PicturesSubContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
+    row-gap: 5%;
+}
+
+.PictureBox img {
+    max-width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.PictureBox h3 {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    color: aliceblue;
+    font-size: 25px;
+}
+
+.PictureBox figcaption {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    color: aliceblue;
+    text-indent: 2em;
+    text-align: justify;
+    font-size: 15px;
+}
+
+
+/* ========== comments ========== */
+
+/*lembrar de pesquisar
+<article> para o conteúdo principal da página (como avaliações ou comentários).
+<section> pode ser utilizado para agrupar blocos de conteúdo logicamente relacionados.
+<figure> para blocos que contenham imagens importantes.
+<aside> para informações complementares ou auxiliares, como avaliações.
+Se a div filha estiver dentro de um contêiner flex (como a div pai), você pode usar 'margin-top: auto;' na última div filha. Isso fará com que ela se ajuste automaticamente para ocupar o espaço restante na margem inferior
+*/
+
+.CT_main {
+    /* background-color: hsla(0, 100%, 25%, 0.094); */
+    padding: 3%;
+}
+
+.CT-article {
+    position: relative;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 3%;
+}
+
+.subpage_title_block {
+    border: 1px solid aliceblue;
+    border-radius: 6px;
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    /* justify-content: space-between; */
+    padding: 1.5%;
+    flex-direction:row;
+}
+
+.SubpageStl{
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 30px;
+}
+
+ .CSBlock {
+    /* border: solid; */
+    border-color: pink;
+    display: flex; 
+    width: 100%;
+}
+
+.CtLBlock {
+    /* border: solid; */
+    border-color: green;
+    width: 160px;
+    height: 200px;
+}
+
+.CtLBlock img {
+    width: auto;
+    height: 190px;
+}
+
+.subpage_title_block_column{
+    /* border: solid; */
+    /* border-color: aqua; */
+    width: 250px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.score {
+    /* margin-top: 2%; */
+    /* border: solid; */
+    border-color: red;
+    width: 100%;
+    display: grid;
+
+}
+
+.score-fig-box {
+    /* border: dotted; */
+    border-color: rgb(242, 0, 255);
+    width: 100%;
+    height: 120px;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    color: aliceblue;
+    text-indent: 1em;
+    padding-top: 35px;
+    /* margin-bottom: 100px; */
+    
+
+}
+
+.score img {
+    max-width: 98%;
+    height: auto; /* Isso mantém a proporção da imagem */
+}
+
+.stbcBlock {
+    /* border: dotted; */
+    border-color: pink;
+    position: absolute;
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 29px;
+    margin-bottom: 10px;
+}
+
+.Parent a{
+    background-color: rgba(255, 0, 0, 0.049);
+    font-size: 29px;
+}
+
+input[disabled] {
+    background-color: #f0f0f0; /* Cor de fundo "desativada" */
+    color: #999; /* Cor do texto "desativado" */
+    cursor: not-allowed; /* Cursor de "não permitido" */
+  }
+
+  /*comentários dos usuários*/
+.art2 {
+    display: grid;
+    row-gap: 20px;
+}    
+
+.UserLimit {
+    background-color: #4b4b4b3a;
+    display: flex;
+    padding: 15px;
+    border: 1px blueviolet;
+    border-radius: 5px;
+    text-align: justify;
+    color: aliceblue;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    /* text-indent: 1em;  */
+    font-size: 18px;
+}
+
+.UserImg {
+    height: 150px;
+    width: 71px;
+    /* border: 1px dotted rgb(255, 230, 0); */
+    margin-right: 2%;
+    background-color: transparent;
+    display: grid;
+}
+.BackgroundStyle{
+    background-color: transparent;
+}
+.UserImg img{
+    width: 70px;
+    height: auto;
+    border-radius: 50%;
+    max-width: 100%;
+}
+
+                                                    /* ========== Media ========== */
+
+@media (max-width: 768px) {
+
+    .footer-navigation{
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+/* ========== index ========== */
+
+    #banner {
+        background-image: url('./midias/Mobile-batman-01.jpg');
+        /* height: 150px;
+        width: 100%;
+        background-position: 40%; */
+        margin-bottom: 50px;
+        
+    }
+
+
+    #trailer-container {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trailer {
+        width: 100%;
+    }
+
+    #sinopse {
+        text-align: justify;
+        text-indent: 2em;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .cards-content {
+        grid-template-columns: 1fr;
+        margin-top: 150px;
+        overflow: hidden;
+    }
+
+    .banner-1 {
+        background-position: 35%;
+    }
+    
+    .banner-2 {
+        background-position: 75%;
+    }
+
+    /* ========== Contacts ========== */
+
+    #contacts {
+        width: auto;
+    }
+    .doc-content{
+        padding-top: 50%;
+        margin-left: auto;
+        width: auto;
+    }
+
+    /* ========== pictures ========== */
+    
+    #PicturesSubContainer {
+        grid-template-columns: 1fr;
+        row-gap: 1%;
+    }
+
+    #pictures-container {
+        margin-bottom: 400px;
+    }
+
+    /* ========== comments ========== */
+    /* .user3 {
+        display: none;
+    } */
+
+    .user4 {
+        margin-bottom: 230px;
+    }
+
+    .subpage_title_block {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 2%;
+        padding-bottom: 6%;
+    }
+
+    .CSBlock {
+    width: 100%;
+    height: 151px;
+    }
+
+    .CtLBlock {
+        width: 120px;
+        height: 140px;
+    }
+
+    .CtLBlock img {
+        height: 144px;
+    }
+
+    .subpage_title_block_column {
+        height: 140px;
+        width: 210px;
+    }
+
+    .Parent a{ /*estilizaçao das letras do bloco de titulo*/
+        font-size: 24px;
+    }
+    .stbcBlock{
+        font-size: 15px;
+    }
+}  
